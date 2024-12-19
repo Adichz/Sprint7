@@ -1,12 +1,10 @@
 import allure
-import pytest
-import requests
 
 from data import gen_payload
 from methods.courier_methods import CourierMethods
 
 
-@allure.description('Класс тестирования создания курьера.')
+@allure.title('Класс тестирования создания курьера.')
 class TestCreateCourier:
 
     @allure.step('Создаем курьера с заполнением всех данных. Ожидаем ответ = 201, ok,True')

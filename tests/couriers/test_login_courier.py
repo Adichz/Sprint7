@@ -1,9 +1,7 @@
 import allure
-import pytest
-
 from methods.login_courier_methods import LoginCourierMethods
 
-@allure.description('Класс тестирования создания курьера.')
+@allure.title('Класс тестирования создания курьера.')
 class TestLoginCourier:
 
     @allure.step('Логинимся курьером. Ожидаем ответ = 200, и получение id')

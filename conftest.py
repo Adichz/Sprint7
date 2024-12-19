@@ -10,7 +10,7 @@ from methods.order_methods import OrderMethods
 def courier():
     payload = gen_payload()
     CourierMethods.create_courier(payload)
-    courier_id = CourierMethods.login_courier(payload.get('login'), payload.get('password'))
+    courier_id = CourierMethods.get_courier_id(payload.get('login'), payload.get('password'))
     order_response = OrderMethods().create_order(json.dumps(ORDER_DATA_1))
     order_id = OrderMethods.get_order_id(order_response.json()["track"])
     OrderMethods.accept_order(order_id, courier_id)

@@ -2,12 +2,10 @@ import allure
 import json
 import pytest
 from conftest import courier
-
-
 from data import ORDER_DATA_1, ORDER_DATA_2, ORDER_DATA_3, ORDER_DATA_4
 from methods.order_methods import OrderMethods
 
-@allure.description('Класс тестирования заказов.')
+@allure.title('Класс тестирования заказов.')
 class TestCreateOrder:
 
     @allure.step('Создаем заказы с разными цветами,с двумя цветами, без цветов. Ожидаем ответ = 201, и получение Track ')
